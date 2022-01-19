@@ -33,7 +33,7 @@ namespace Manager.Infra.Repositories
       return obj;
     }
 
-    public virtual async Task<T> Remove(long id)
+    public virtual async Task Remove(long id)
     {
       var obj = await Get(id);
 
@@ -48,10 +48,10 @@ namespace Manager.Infra.Repositories
     {
       var obj = await _context.Set<T>()
                                     .AsNoTracking()
-                                    .Where(x => x.Id == id)
+                                    .Where(x => x.id == id)
                                     .ToListAsync();
 
-      return object.FirstOrDefault();
+      return obj.FirstOrDefault();
     }
 
     public virtual async Task<List<T>> GetTask()
@@ -62,5 +62,14 @@ namespace Manager.Infra.Repositories
                                 .ToListAsync();
     }
 
+    public Task<List<T>> Get()
+    {
+      throw new System.NotImplementedException();
+    }
+
+    Task<T> IBaseRepository<T>.Remove(long id)
+    {
+      throw new System.NotImplementedException();
+    }
   }
 }
