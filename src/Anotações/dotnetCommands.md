@@ -49,11 +49,11 @@ OBS: A camada Core fica as coisas em comum das camadas como extensão, regex, et
 
 > Adicionar uma referencia de projeto em outro
 ```
-  dotnet add .\Manager.Infra.csproj reference '..\Manager.Domain\Manager.Domain.csproj'
-  dotnet add '.\Manager.Domain.csproj' reference '.\Manager.Core\Manager.Core.csproj'
-  dotnet add .\Manager.Services.csproj reference '..\Manager.Domain\Manager.Domain.csproj'
-  dotnet add .\Manager.Services.csproj reference '..\Manager.Core\Manager.Core.csproj'
-  dotnet add .\Manager.Services.csproj reference '..\Manager.Infraestructure\Manager.Infraestructure.csproj'
+  dotnet add .\Manager.Infra\Manager.Infra.csproj reference '..\Manager.Domain\Manager.Domain.csproj'
+  dotnet add '.\Manager.Domain\Manager.Domain.csproj' reference '.\Manager.Core\Manager.Core.csproj'
+  dotnet add .\Manager.Services\Manager.Services.csproj reference '..\Manager.Domain\Manager.Domain.csproj'
+  dotnet add .\Manager.Services\Manager.Services.csproj reference '..\Manager.Core\Manager.Core.csproj'
+  dotnet add .\Manager.Services\Manager.Services.csproj reference '..\Manager.Infraestructure\Manager.Infraestructure.csproj'
 ```
 
 > Instalar ferramenta do ef migrations
