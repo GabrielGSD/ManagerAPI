@@ -28,5 +28,15 @@ OBS: A camada Core fica as coisas em comum das camadas como extensão, regex, et
 
 ```dotnet build```
 
+-> Instalar o Entity Framework
+
+```dotnet add package Microsoft.EntityFrameworkCore```
+
+```dotnet add package Microsoft.EntityFrameworkCore.SqlServer```
+
+```dotnet add package Microsoft.EntityFrameworkCore.Tools```
+
+```dotnet add package Microsoft.EntityFrameworkCore.Design```
+
 
 
