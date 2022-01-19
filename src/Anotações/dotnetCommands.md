@@ -8,11 +8,13 @@
 
 -> Adicionar novo projeto biblioteca de classes
 
-```dotnet new classlib -o Manager.Domain```
+```
+  dotnet new classlib -o Manager.Domai
 
-```dotnet new classlib -o Manager.Services```
+  dotnet new classlib -o Manager.Services
 
-```dotnet new classlib -o Manager.Infra```
+  dotnet new classlib -o Manager.Infra
+```
 
 OBS: A camada Core fica as coisas em comum das camadas como extensão, regex, etc.
 
