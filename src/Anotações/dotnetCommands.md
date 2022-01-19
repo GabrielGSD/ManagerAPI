@@ -56,5 +56,21 @@ OBS: A camada Core fica as coisas em comum das camadas como extensão, regex, et
   dotnet add .\Manager.Services.csproj reference '..\Manager.Infraestructure\Manager.Infraestructure.csproj'
 ```
 
+> Instalar ferramenta do ef migrations
+
+```dotnet tool install --global dotnet-ef --version 5.0.1```
+
+> Cria a migration
+
+```dotnet ef migrations add InitialMigration```
+
+> Atualiza o banco de dados com a migration
+
+```dotnet ef database update```
+
+> Remove migration
+
+```dotnet ef migrations remove```
+
 
 

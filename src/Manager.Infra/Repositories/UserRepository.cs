@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Manager.Domain.Entities;
 using Manager.Infra.Context;
 using Manager.Infra.Interface;
-
+using Microsoft.EntityFrameworkCore;
 
 namespace Manager.Infra.Repositories
 {
@@ -19,9 +20,9 @@ namespace Manager.Infra.Repositories
         public async Task<User> GetByEmail(string email)
         {
             var user = await _context.Users.Where
-                                            (x => x.Email.ToLower() == email.ToLower())
+                                            (x => x.Email.ToLower().Contains(email.ToLower()))
                                             .AsNoTracking()
-                                            .FirstOrDefault();
+                                            .FirstOrDefaultAsync();
             return user;
         }
 
