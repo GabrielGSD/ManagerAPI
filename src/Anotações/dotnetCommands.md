@@ -14,8 +14,17 @@
 
 ```dotnet new classlib -o Manager.Infra```
 
-A camada Core fica as coisas em comum das camadas como extensão, regex, etc.
+OBS: A camada Core fica as coisas em comum das camadas como extensão, regex, etc.
+
 ```dotnet new classlib -o Manager.Core```
+
+-> Adicionar FluentValidation
+
+```dotnet add package FluentValidation```
+
+-> Buildar o projeto
+
+```dotnet build```
 
 
 
