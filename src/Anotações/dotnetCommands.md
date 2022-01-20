@@ -54,6 +54,8 @@ OBS: A camada Core fica as coisas em comum das camadas como extensão, regex, et
   dotnet add .\Manager.Services\Manager.Services.csproj reference '..\Manager.Domain\Manager.Domain.csproj'
   dotnet add .\Manager.Services\Manager.Services.csproj reference '..\Manager.Core\Manager.Core.csproj'
   dotnet add .\Manager.Services\Manager.Services.csproj reference '..\Manager.Infraestructure\Manager.Infraestructure.csproj'
+
+  dotnet add .\Manager.API.csproj reference '..\Manager.Domain\Manager.Domain.csproj'
 ```
 
 > Instalar ferramenta do ef migrations
@@ -71,6 +73,10 @@ OBS: A camada Core fica as coisas em comum das camadas como extensão, regex, et
 > Remove migration
 
 ```dotnet ef migrations remove```
+
+> Instalar AutoMapper
+
+```dotnet add package AutoMapper```
 
 
 
